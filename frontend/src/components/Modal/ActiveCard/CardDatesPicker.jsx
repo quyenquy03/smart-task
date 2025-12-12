@@ -70,10 +70,10 @@ function CardDatesPicker({ dates, anchorEl, onClose, onUpdateDates }) {
         <Stack spacing={2}>
           <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
             <WatchLaterOutlinedIcon fontSize="small" />
-            <Typography sx={{ fontWeight: 700 }}>Dates</Typography>
+            <Typography sx={{ fontWeight: 700 }}>Thời gian</Typography>
           </Box>
           <TextField
-            label="Start date"
+            label="Ngày bắt đầu"
             type="date"
             value={formatInputDate(normalizedDates.startDate)}
             onChange={handleDateChange("startDate")}
@@ -82,7 +82,7 @@ function CardDatesPicker({ dates, anchorEl, onClose, onUpdateDates }) {
             fullWidth
           />
           <TextField
-            label="End date"
+            label="Ngày kết thúc"
             type="date"
             value={formatInputDate(normalizedDates.endDate)}
             onChange={handleDateChange("endDate")}

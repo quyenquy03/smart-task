@@ -182,18 +182,18 @@ function CardTaskList({
       </Menu>
 
       <Dialog open={Boolean(editTask)} onClose={() => setEditTask(null)} fullWidth maxWidth="sm">
-        <DialogTitle>Update Task</DialogTitle>
+        <DialogTitle>Cập nhật công việc</DialogTitle>
         <DialogContent>
           <Stack spacing={2} sx={{ mt: 1 }}>
             <TextField
-              label="Title"
+              label="Tiêu đề"
               fullWidth
               size="small"
               value={editTask?.title || ''}
               onChange={(e) => setEditTask((prev) => ({ ...prev, title: e.target.value }))}
             />
             <TextField
-              label="Description"
+              label="Mô tả"
               fullWidth
               multiline
               minRows={2}
@@ -204,7 +204,7 @@ function CardTaskList({
           </Stack>
         </DialogContent>
         <DialogActions>
-          <Button onClick={() => setEditTask(null)}>Cancel</Button>
+          <Button onClick={() => setEditTask(null)}>Hủy</Button>
           <Button
             variant="contained"
             onClick={() => {
@@ -213,7 +213,7 @@ function CardTaskList({
               setEditTask(null)
             }}
           >
-            Save
+            Lưu
           </Button>
         </DialogActions>
       </Dialog>

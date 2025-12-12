@@ -37,5 +37,5 @@ export const LABEL_COLORS = [
   '#0079bf', // blue
   '#00c2e0', // sky
   '#ff78cb', // pink
-  '#b6bbbf'  // gray
+  '#b6bbbf' // gray
 ]

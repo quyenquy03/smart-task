@@ -56,7 +56,7 @@ function CardAttachmentPicker({
           sx={{ mb: 1.5 }}
         >
           <Typography sx={{ fontWeight: 800, letterSpacing: 0.2 }}>
-            Attachments
+            Tệp đính kèm
           </Typography>
           <Button
             variant="contained"
@@ -65,7 +65,7 @@ function CardAttachmentPicker({
             component="label"
             sx={{ borderRadius: 999 }}
           >
-            Upload
+            Tải lên
             <VisuallyHiddenInput type="file" onChange={handleFileChange} />
           </Button>
         </Stack>
@@ -73,7 +73,7 @@ function CardAttachmentPicker({
         <Stack spacing={1.2}>
           {items.length === 0 && (
             <Typography variant="body2" color="text.secondary">
-              No attachments yet.
+              Chưa có tệp đính kèm.
             </Typography>
           )}
 

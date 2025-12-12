@@ -66,7 +66,7 @@ function CardLabelPicker({
     }
 
     if (!board?._id) {
-      toast.error("Board is not ready");
+      toast.error("Board chưa sẵn sàng");
       return;
     }
 
@@ -171,7 +171,7 @@ function CardLabelPicker({
         transformOrigin={{ vertical: "center", horizontal: "right" }}
       >
         <Box sx={{ p: 2, width: 320 }}>
-          <Typography sx={{ fontWeight: 700, mb: 1 }}>Board labels</Typography>
+          <Typography sx={{ fontWeight: 700, mb: 1 }}>Nhãn của board</Typography>
           <Stack spacing={1}>
             <Button
               variant="outlined"
@@ -183,11 +183,11 @@ function CardLabelPicker({
               }}
               sx={{ justifyContent: "flex-start" }}
             >
-              Add label
+              Thêm nhãn
             </Button>
             {boardLabels.length === 0 && (
               <Typography variant="body2" color="text.secondary">
-                No labels yet.
+                Chưa có nhãn nào.
               </Typography>
             )}
             {boardLabels.map((label) => {
@@ -291,7 +291,7 @@ function CardLabelPicker({
         maxWidth="xs"
       >
         <DialogTitle>
-          {editingLabelId ? "Update label" : "Add label"}
+          {editingLabelId ? "Cập nhật nhãn" : "Thêm nhãn"}
         </DialogTitle>
         <DialogContent>
           <TextField
@@ -339,15 +339,15 @@ function CardLabelPicker({
               resetDialog();
             }}
           >
-            Cancel
+            Hủy
           </Button>
           {editingLabelId ? (
             <Button variant="contained" onClick={handleUpdateLabel}>
-              Save
+              Lưu
             </Button>
           ) : (
             <Button variant="contained" onClick={handleCreateLabel}>
-              Add
+              Thêm
             </Button>
           )}
         </DialogActions>

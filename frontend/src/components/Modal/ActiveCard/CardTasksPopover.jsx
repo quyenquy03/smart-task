@@ -39,7 +39,7 @@ function CardTasksPopover({ anchorEl, onClose, onAddTask }) {
         <Stack spacing={1.5}>
           <TextField
             size="small"
-            label="Title"
+            label="Tiêu đề"
             fullWidth
             value={title}
             onChange={(e) => setTitle(e.target.value)}
@@ -47,7 +47,7 @@ function CardTasksPopover({ anchorEl, onClose, onAddTask }) {
           />
           <TextField
             size="small"
-            label="Description"
+            label="Mô tả"
             multiline
             minRows={2}
             fullWidth
@@ -56,9 +56,9 @@ function CardTasksPopover({ anchorEl, onClose, onAddTask }) {
           />
           <Divider />
           <Stack direction="row" justifyContent="flex-end" spacing={1}>
-            <Button onClick={handleClose}>Cancel</Button>
+            <Button onClick={handleClose}>Hủy</Button>
             <Button variant="contained" onClick={handleSave} disabled={!title.trim()}>
-              Save
+              Lưu
             </Button>
           </Stack>
         </Stack>

@@ -44,6 +44,20 @@ const BOARD_COLLECTION_SCHEMA = Joi.object({
     Joi.string().pattern(OBJECT_ID_RULE).message(OBJECT_ID_RULE_MESSAGE)
   ).default([]),
 
+  // Template background của board
+  template: Joi.object({
+    type: Joi.string().valid('color', 'image', 'custom').required(),
+    value: Joi.string().allow(null, '')
+  }).default({ type: 'color', value: '#1976d2' }),
+
+  // Các hình nền đã upload
+  backgrounds: Joi.array().items(
+    Joi.object({
+      id: Joi.string().required(),
+      imageUrl: Joi.string().uri().required()
+    })
+  ).default([]),
+
   createdAt: Joi.date().timestamp('javascript').default(Date.now),
   updatedAt: Joi.date().timestamp('javascript').default(null),
   _destroy: Joi.boolean().default(false)
